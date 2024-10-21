@@ -403,6 +403,25 @@ nav {
   gap: 10px;
   padding-top: 32px;
 }
+.slider-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
 /* -------------------start project---------------- */
 #start-project {
   padding: 80px 0px;
