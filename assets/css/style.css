@@ -32,7 +32,7 @@ body {
   transition: all 0.3s ease;
 }
 .button--primary:hover {
-  background: red;
+  background: var(--primary-color);
 }
 /*--------- navbar start-------------*/
 .container {
@@ -84,6 +84,7 @@ nav {
 .btn-portfolio:hover {
   background-color: var(--primary-color);
 }
+/* banner start------- */
 .banner-buttons {
   display: flex;
   flex-direction: row;
@@ -99,7 +100,7 @@ nav {
   font-size: 16px;
   cursor: pointer;
 }
-/*------------ banner start--------------- */
+
 .banner-container {
   width: 65%;
   display: flex;
@@ -123,7 +124,7 @@ nav {
 .banner-description {
   color: var(--subtitle-color);
 }
-/* images start*/
+/*--------- images start----------*/
 .image-wrapper {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -482,3 +483,100 @@ nav {
   padding: 20px 0px;
 }
 /*---------------------media query start------------- */
+#mobile-menu-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: var(--button-color);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  #mobile-menu-toggle {
+    display: block;
+  }
+  #menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #nav-action {
+    display: none;
+  }
+  .banner-container {
+    width: 100%;
+  }
+  .banner-subtitle,
+  .banner-description {
+    font-size: 14px;
+  }
+  .banner-title{
+    font-size: 34px;
+    padding: 10px 0px;
+  }
+  .image-wrapper {
+    grid-template-columns: repeat(1,auto);
+  }
+  .analytics-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .qoutes-card {
+    width: 100%;
+    font-weight: lighter;
+  }
+  .partners-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .services-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .service-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .services-description,
+  .start-project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-title {
+    text-align: center;
+  }
+  .services-title button {
+    margin-bottom: 24px;
+  }
+  .case-studies-wrapper ,
+  .testimonials-wrapper,
+  .footer-content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .case-studies-heading{
+    width: 100%;
+  }
+}
